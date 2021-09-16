@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e9c74e;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.heading {
+    color: black;
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.para {
+    transition-duration: 1s;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+button {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: #dddfd4;
+    border: solid 7px #173e43;
+    border-radius: 7px;
+    font-size: 30px;
+    margin: 25px;
+    font-weight: 500;
+    padding: 25px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3fb0ac;
+    color: white;
+    border-color: white;
+}
