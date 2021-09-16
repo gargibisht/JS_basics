@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+
+/*
+body {
+   font-family: 'Kaisei HarunoUmi', serif;
+   background-image: linear-gradient(43deg, #C850C0, #FFCC70);
+}
+
+.head_para {
+   text-align: center;
+   font-size: 25px;
+   margin: 10px;
+}
+
+.parab {
+   margin: 10px;
+   font-size: 18px;
+}
+
+#head1 {
+   margin-bottom: 10px;
+   font-weight: 600;
+}
+
+.nxtpara {
+   margin: 10px;
+   font-size: 18px;
+}
+
+#head2 {
+   margin-bottom: 10px;
+   font-weight: 600;
+}
+
+.nxtpara1 {
+   margin: 10px;
+   font-size: 18px;
+}
+
+#head3 {
+   margin-bottom: 10px;
+   font-weight: 600;
+}
+*/
+
+.t1,
+th,
+td {
+    width: 65%;
+}
+
+.t2,
+th,
+td {
+    width: auto;
+}
+
+.butn {
+    text-align: center;
+}
+
+button {
+    font-family: 'Kaisei HarunoUmi', serif;
+    background-color: #FFCC70;
+    border: solid 5px #4158D0;
+    border-radius: 7px;
+    font-size: 20px;
+    margin: 15px;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+}
