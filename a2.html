@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,200&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="a2.css">
+    <title>Code 2</title>
+</head>
+
+<body>
+    <div class="sawal" id="paragraph">
+        Create an HTML page with a paragraph written on it and under which 9 buttons are placed in a 3X3 grid. The first row is for buttons labeled with colors names Red, Green, and Blue, the second row with numbers 10, 20, 30, and the third row with different
+        font names. Click event of each of the buttons should make the appropriate change in the style of paragraph.
+
+
+    </div>
+    <div class="box">
+        <div class="rang">
+            <button value="red">Red</button>
+            <button value="blue">Blue</button>
+            <button value="green">Green</button>
+        </div>
+        <div class="size">
+            <button value="10">10</button>
+            <button value="20">20</button>
+            <button value="30">30</button>
+        </div>
+        <div class="font">
+            <button value="Lobster, cursive">Lobster</button>
+            <button value="Roboto Mono, monospace">Roboto</button>
+            <button value="Barlow Condensed, sans-serif">Sans-serif</button>
+        </div>
+
+    </div>
+
+    <script>
+        function myFunc(e) {
+            var text;
+            para = document.getElementById('paragraph')
+            para.style.backgroundColor = e.target.value;
+            para.style.color = "#E1FCFD";
+            para.style.fontSize = e.target.value + "px";
+            para.style.fontFamily = e.target.value
+        }
+
+        function addtobuttons() {
+            var buttons = document.getElementsByTagName("button");
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener("click", myFunc);
+            }
+        }
+
+        window.addEventListener("load", function() {
+            addtobuttons();
+        });
+    </script>
+</body>
+
+</html>
