@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="a1.css">
+</head>
+
+<body>
+    <div class="sawal">
+        Create an HTML page with the sole purpose to show multiplication tables of 2 to 10 (row-wise) created by JavaScript. Initially, the page is blank. With help of setInterval function print a row every 5 seconds in different colors and increasing font size.
+
+    </div>
+
+    <script>
+        function text_font_size(i) {
+            return 10 + 5 * i + "px";
+        }
+
+        function text_color(i) {
+            color_array = ['#1D2228', '#FB8122', '#1BA098', '#E40C2B', '#EF0D50', '#1ABC9C', '#5626C4', '1D2228', '#FB8122', '#1BA098']
+            return color_array[i - 1]
+        }
+
+        function display(i) {
+            timer = document.getElementById('timer');
+
+            var table_row = document.createElement("button");
+            table_row.classList.add('button2');
+            table_row.style.fontFamily = 'Barlow Condensed', 'sans - serif';
+            table_row.style.fontWeight = 'bold';
+            table_row.style.margin = 30 + "px";
+            table_row.style.padding = 12 + "px";
+            table_row.style.width = 400 + "px";
+            table_row.style.backgroundColor = "#E1FCFD";
+            table_row.style.fontSize = text_font_size(i);
+            table_row.style.color = text_color(i);
+            var row_text = document.createTextNode("89 x " + i + " = " + 89 * i + "");
+            table_row.appendChild(row_text);
+            timer.appendChild(table_row);
+
+        }
+
+        function timer_display() {
+            var refresh = 5000; // Refresh rate in milli seconds
+            var i = 0;
+            myvar = setInterval(function() {
+                if (i == 10)
+                    clearInterval(myvar)
+                else
+                    display(++i)
+            }, refresh)
+        }
+        timer_display()
+    </script>
+
+
+
+
+
+
+    <div id=timer></div>
+
+</body>
+
+</html>
